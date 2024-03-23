@@ -94,14 +94,7 @@
                             <sourceRoot>target/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/NAWebServiceSoapHttpPort.wsdl</wsdl>
-                                    <bindingFiles>
-                                        <bindingFile>${basedir}/src/test/resources/bindings/bindings.xjb</bindingFile>
-                                    </bindingFiles>
-                                    <extraargs>
-                                        <extraarg>-databinding</extraarg>
-                                        <extraarg>jaxb</extraarg>
-                                    </extraargs>
+                                    <wsdl>${project.basedir}/src/main/resources/NAWebServiceSoapHttpPort.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
@@ -116,14 +109,7 @@
                             <sourceRoot>target/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/UtlevererWebServiceSoapHttpPort.wsdl</wsdl>
-                                    <bindingFiles>
-                                        <bindingFile>${basedir}/src/test/resources/bindings/bindings.xjb</bindingFile>
-                                    </bindingFiles>
-                                    <extraargs>
-                                        <extraarg>-databinding</extraarg>
-                                        <extraarg>jaxb</extraarg>
-                                    </extraargs>
+                                    <wsdl>${project.basedir}/src/main/resources/UtlevererWebServiceSoapHttpPort.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
@@ -138,14 +124,7 @@
                             <sourceRoot>target/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/RekvirentWebServiceSoapHttpPort.wsdl</wsdl>
-                                    <bindingFiles>
-                                        <bindingFile>${basedir}/src/test/resources/bindings/bindings.xjb</bindingFile>
-                                    </bindingFiles>
-                                    <extraargs>
-                                        <extraarg>-databinding</extraarg>
-                                        <extraarg>jaxb</extraarg>
-                                    </extraargs>
+                                    <wsdl>${project.basedir}/src/main/resources/RekvirentWebServiceSoapHttpPort.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
