@@ -10,7 +10,7 @@
     </parent>
 
     <properties>
-        <spring-boot.version>3.3.2</spring-boot.version>
+        <spring-boot.version>3.4.3</spring-boot.version>
     </properties>
 
     <artifactId>spring-boot</artifactId>
@@ -38,6 +38,7 @@
 
     <modules>
         <module>fest</module>
+<!--        <module>fest-fhir</module>-->
         <module>spring-boot-rest</module>
         <module>spring-boot-soap</module>
     </modules>

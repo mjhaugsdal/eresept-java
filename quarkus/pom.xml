@@ -30,7 +30,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${quarkus.platform.group-id}</groupId>
+                <groupId>io.quarkiverse.cxf</groupId>
                 <artifactId>quarkus-cxf-bom</artifactId>
                 <version>${quarkus.platform.version}</version>
                 <type>pom</type>
