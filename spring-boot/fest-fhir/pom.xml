@@ -64,74 +64,24 @@
             <artifactId>jackson-databind-nullable</artifactId>
             <version>0.2.6</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.glassfish.jersey.core</groupId>-->
-        <!--            <artifactId>jersey-client</artifactId>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.glassfish.jersey.media</groupId>-->
-        <!--            <artifactId>jersey-media-multipart</artifactId>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.glassfish.jersey.media</groupId>-->
-        <!--            <artifactId>jersey-media-json-jackson</artifactId>-->
-        <!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>4.12.0</version>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.gsonfire/gson-fire -->
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart -->
         <dependency>
-            <groupId>io.gsonfire</groupId>
-            <artifactId>gson-fire</artifactId>
-            <version>1.9.0</version>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor -->
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
         <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>logging-interceptor</artifactId>
-            <version>4.12.0</version>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-
-        <!-- Kotlin Reflect (if using reflection) -->
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-reflect</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>retrofit</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.squareup.retrofit2</groupId>
-            <artifactId>converter-gson</artifactId> <!-- or kotlinx-serialization converter -->
-            <version>2.9.0</version>
-        </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
         <!--        <dependency>-->
@@ -154,77 +104,31 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>7.11.0</version>
+                <version>7.12.0</version>
                 <executions>
-                    <!--                    <execution>-->
-                    <!--                        <id>java-client</id>-->
-                    <!--                        <goals>-->
-                    <!--                            <goal>generate</goal>-->
-                    <!--                        </goals>-->
-                    <!--                        <configuration>-->
-                    <!--                            <inputSpec>${project.basedir}/src/main/resources/FHIR-R4.json</inputSpec>-->
-                    <!--                            &lt;!&ndash;                            <generatorName>jaxrs-cxf-client</generatorName>&ndash;&gt;-->
-                    <!--                            <generatorName>java</generatorName>-->
-                    <!--                            <library>jersey3</library>-->
-                    <!--                            <modelPackage>io.github.mjhaugsdal.fhir.model</modelPackage>-->
-                    <!--                            <apiPackage>io.github.mjhaugsdal.fhir.api</apiPackage>-->
-                    <!--                            <generateApiTests>false</generateApiTests>-->
-                    <!--                            <generateModelTests>false</generateModelTests>-->
-                    <!--                             <skipValidateSpec>true</skipValidateSpec>-->
-                    <!--                            <configOptions>-->
-                    <!--                                <useJakartaEe>true</useJakartaEe>-->
-                    <!--                                <sourceFolder>src/gen/java/main</sourceFolder>-->
-                    <!--                                <dateLibrary>java8</dateLibrary>-->
-                    <!--                                <legacyDiscriminatorBehavior>false</legacyDiscriminatorBehavior>-->
-                    <!--                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>-->
-                    <!--                            </configOptions>-->
-                    <!--                        </configuration>-->
-                    <!--                    </execution>-->
-
                     <execution>
-                        <id>kotlin-client</id>
+                        <id>java-client</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/FHIR-R4.json</inputSpec>
-                            <generatorName>kotlin</generatorName>
-                            <library>jvm-retrofit2</library>
-<!--                            <modelPackage>io.github.mjhaugsdal.fhir.model</modelPackage>-->
-<!--                            <apiPackage>io.github.mjhaugsdal.fhir.api</apiPackage>-->
-<!--                            <generateApiTests>false</generateApiTests>-->
-<!--                            <generateModelTests>false</generateModelTests>-->
+                            <!--                            <generatorName>jaxrs-cxf-client</generatorName>-->
+                            <generatorName>java</generatorName>
+                            <library>jersey3</library>
+                            <modelPackage>io.github.mjhaugsdal.fhir.model</modelPackage>
+                            <apiPackage>io.github.mjhaugsdal.fhir.api</apiPackage>
+                            <generateApiTests>false</generateApiTests>
+                            <generateModelTests>false</generateModelTests>
                             <skipValidateSpec>true</skipValidateSpec>
                             <configOptions>
-                                <generateOneOfAnyOfWrappers>true</generateOneOfAnyOfWrappers>
-                                <serializationLibrary>gson</serializationLibrary>
-<!--                                <useJakartaEe>true</useJakartaEe>-->
+                                <useJakartaEe>true</useJakartaEe>
                                 <sourceFolder>src/gen/java/main</sourceFolder>
                                 <dateLibrary>java8</dateLibrary>
-                                <!--                                <legacyDiscriminatorBehavior>false</legacyDiscriminatorBehavior>-->
-                                <!--                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>-->
+                                <legacyDiscriminatorBehavior>false</legacyDiscriminatorBehavior>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
                             </configOptions>
                         </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <goals>
-                            <goal>test-compile</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
