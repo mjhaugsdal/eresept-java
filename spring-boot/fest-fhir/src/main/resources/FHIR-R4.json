@@ -3497,6 +3497,89 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "name": "name-language",
+                        "in": "query",
+                        "description": "Language code for this name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "in": "query",
+                        "description": "Business identifier for this product. Could be an MPID",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_tag",
+                        "in": "query",
+                        "description": "Tags applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The full product name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_security",
+                        "in": "query",
+                        "description": "Security Labels applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_lastUpdated",
+                        "in": "query",
+                        "description": "Format - date (as full-date in RFC3339). Format - date (as full-date in RFC3339). When the resource version last changed",
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Logical id of this artifact",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_format",
+                        "in": "query",
+                        "description": "Output formatting",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_count",
+                        "in": "query",
+                        "description": "Page size. Max 1000 ressources per page.",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000
+                        }
+                    },
+                    {
+                        "name": "ct",
+                        "in": "query",
+                        "description": "Token for a given page. Token for the next page is provided as part of the response object.",
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {
@@ -3554,7 +3637,7 @@
                                 },
                                 "examples": {
                                     "mpd": {
-                                        "$ref": "#/components/examples/activitydef"
+                                        "$ref": "#/components/examples/activitydefById"
                                     }
                                 }
                             }
@@ -3578,11 +3661,94 @@
                 "tags": [
                     "PlanDefinition"
                 ],
-                "parameters": [
+               "parameters": [
                     {
                         "name": "_source",
                         "in": "query",
                         "description": "Identifies where the resource comes from",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name-language",
+                        "in": "query",
+                        "description": "Language code for this name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "in": "query",
+                        "description": "Business identifier for this product. Could be an MPID",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_tag",
+                        "in": "query",
+                        "description": "Tags applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The full product name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_security",
+                        "in": "query",
+                        "description": "Security Labels applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_lastUpdated",
+                        "in": "query",
+                        "description": "Format - date (as full-date in RFC3339). Format - date (as full-date in RFC3339). When the resource version last changed",
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Logical id of this artifact",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_format",
+                        "in": "query",
+                        "description": "Output formatting",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_count",
+                        "in": "query",
+                        "description": "Page size. Max 1000 ressources per page.",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000
+                        }
+                    },
+                    {
+                        "name": "ct",
+                        "in": "query",
+                        "description": "Token for a given page. Token for the next page is provided as part of the response object.",
                         "schema": {
                             "type": "string"
                         }
@@ -3624,10 +3790,92 @@
                 ],
                 "parameters": [
                     {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id of resource",
-                        "required": true,
+                        "name": "_source",
+                        "in": "query",
+                        "description": "Identifies where the resource comes from",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name-language",
+                        "in": "query",
+                        "description": "Language code for this name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "in": "query",
+                        "description": "Business identifier for this product. Could be an MPID",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_tag",
+                        "in": "query",
+                        "description": "Tags applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The full product name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_security",
+                        "in": "query",
+                        "description": "Security Labels applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_lastUpdated",
+                        "in": "query",
+                        "description": "Format - date (as full-date in RFC3339). Format - date (as full-date in RFC3339). When the resource version last changed",
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Logical id of this artifact",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_format",
+                        "in": "query",
+                        "description": "Output formatting",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_count",
+                        "in": "query",
+                        "description": "Page size. Max 1000 ressources per page.",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000
+                        }
+                    },
+                    {
+                        "name": "ct",
+                        "in": "query",
+                        "description": "Token for a given page. Token for the next page is provided as part of the response object.",
                         "schema": {
                             "type": "string"
                         }
@@ -3643,7 +3891,7 @@
                                 },
                                 "examples": {
                                     "mpd": {
-                                        "$ref": "#/components/examples/plandef"
+                                        "$ref": "#/components/examples/plandefById"
                                     }
                                 }
                             }
@@ -3659,20 +3907,102 @@
                 ]
             }
         },
-        "/RegulatedAuthorization/{id}": {
+        "/MedicinalProductAuthorization": {
             "get": {
-                "summary": "Get Regulated Authorization",
-                "description": "Get a RegulatedAuthorization by its ID",
-                "operationId": "get-regulatedauthorization-id",
+                "summary": "List Medicinal Product Authorization",
+                "description": "Get all MedicinalProductAuthorizations",
+                "operationId": "get-MedicinalProductAuthorization",
                 "tags": [
-                    "RegulatedAuthorization"
+                    "MedicinalProductAuthorization"
                 ],
                 "parameters": [
                     {
-                        "name": "id",
-                        "in": "path",
-                        "description": "id of resource",
-                        "required": true,
+                        "name": "_source",
+                        "in": "query",
+                        "description": "Identifies where the resource comes from",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name-language",
+                        "in": "query",
+                        "description": "Language code for this name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "in": "query",
+                        "description": "Business identifier for this product. Could be an MPID",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_tag",
+                        "in": "query",
+                        "description": "Tags applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The full product name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_security",
+                        "in": "query",
+                        "description": "Security Labels applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_lastUpdated",
+                        "in": "query",
+                        "description": "Format - date (as full-date in RFC3339). Format - date (as full-date in RFC3339). When the resource version last changed",
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Logical id of this artifact",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_format",
+                        "in": "query",
+                        "description": "Output formatting",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_count",
+                        "in": "query",
+                        "description": "Page size. Max 1000 ressources per page.",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000
+                        }
+                    },
+                    {
+                        "name": "ct",
+                        "in": "query",
+                        "description": "Token for a given page. Token for the next page is provided as part of the response object.",
                         "schema": {
                             "type": "string"
                         }
@@ -3684,7 +4014,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/RegulatedAuthorization"
+                                    "$ref": "#/components/schemas/MedicinalProductAuthorization"
                                 },
                                 "examples": {
                                     "mpd": {
@@ -3699,7 +4029,134 @@
                     {
                         "lang": "curl",
                         "label": "curl | Search by ID",
-                        "source": "curl --location --request GET 'https://st-api.legemiddelverket.no/fhir-r4/ActivityDefinition/0001' \\\n --header 'Ocp-Apim-Subscription-Key: 1a13b456c7d89012345e6fg78hi901j2 \n"
+                        "source": "curl --location --request GET 'https://st-api.legemiddelverket.no/fhir-r4/MedicinalProductAuthorization' \\\n --header 'Ocp-Apim-Subscription-Key: 1a13b456c7d89012345e6fg78hi901j2 \n"
+                    }
+                ]
+            }
+        },
+        "/MedicinalProductAuthorization/{id}": {
+            "get": {
+                "summary": "Get Medicinal Product Authorization",
+                "description": "Get a MedicinalProductAuthorization by its ID",
+                "operationId": "get-MedicinalProductAuthorization-id",
+                "tags": [
+                    "MedicinalProductAuthorization"
+                ],
+                "parameters": [
+                    {
+                        "name": "_source",
+                        "in": "query",
+                        "description": "Identifies where the resource comes from",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name-language",
+                        "in": "query",
+                        "description": "Language code for this name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "identifier",
+                        "in": "query",
+                        "description": "Business identifier for this product. Could be an MPID",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_tag",
+                        "in": "query",
+                        "description": "Tags applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "The full product name",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_security",
+                        "in": "query",
+                        "description": "Security Labels applied to this resource",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_lastUpdated",
+                        "in": "query",
+                        "description": "Format - date (as full-date in RFC3339). Format - date (as full-date in RFC3339). When the resource version last changed",
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    },
+                    {
+                        "name": "_id",
+                        "in": "query",
+                        "description": "Logical id of this artifact",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_format",
+                        "in": "query",
+                        "description": "Output formatting",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "_count",
+                        "in": "query",
+                        "description": "Page size. Max 1000 ressources per page.",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 1000
+                        }
+                    },
+                    {
+                        "name": "ct",
+                        "in": "query",
+                        "description": "Token for a given page. Token for the next page is provided as part of the response object.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MedicinalProductAuthorization"
+                                },
+                                "examples": {
+                                    "mpd": {
+                                        "$ref": "#/components/examples/regulatedauthById"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-codeSamples": [
+                    {
+                        "lang": "curl",
+                        "label": "curl | Search by ID",
+                        "source": "curl --location --request GET 'https://st-api.legemiddelverket.no/fhir-r4/MedicinalProductAuthorization/0001' \\\n --header 'Ocp-Apim-Subscription-Key: 1a13b456c7d89012345e6fg78hi901j2 \n"
                     }
                 ]
             }
@@ -6963,180 +7420,350 @@
                             "resourceType": {
                                 "type": "string",
                                 "readOnly": true,
-                                "description": "The resource type",
-                                "enum": [
-                                    "ActivityDefinition"
-                                ]
-                            },
-                            "description": {
-                                "type": "string",
-                                "description": "Description of the resource.",
-                                "items": {
-                                    "$ref": ""
-                                }
+                                "description": "Type of resource",
+                                "enum": ["ActivityDefinition"]
                             },
                             "id": {
                                 "type": "string",
-                                "description": "Id of the resource",
+                                "description": "Logical id of this artifact",
                                 "readOnly": true
                             },
-                            "identifier": {
-                                "type": "array",
-                                "description": "Business identifier for this product",
-                                "items": {
-                                    "$ref": "#/components/schemas/Identifier"
-                                }
-                            },
-                            "kind": {
-                                "type": "string",
-                                "description": "Type of activity 'MedicationRequest'",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "publisher": {
-                                "type": "string",
-                                "description": "Who publishes the treatment options. Always 'Sykehusinnkjøp' ",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "status": {
-                                "type": "string",
-                                "description": "Publication status of the resource. Either 'draft, active, retired eller unknown'.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "subjectReference": {
-                                "type": "Reference",
-                                "description": "Reference to the Subject resource",
-                                "items": {
-                                    "$ref": "#/components/schemas/Subject"
+                            "meta": {
+                                "type": "object",
+                                "properties": {
+                                    "versionId": { 
+                                        "type": "string",
+                                        "description": "Version specific identifier"
+                                    },
+                                    "lastUpdated": {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "description": "When the resource version last changed"
+                                    }
                                 }
                             },
                             "extension": {
-                                "type": "Extension",
-                                "description": "Extension to SAFEST PackagedProductDefinition",
+                                "type": "array",
                                 "items": {
-                                    "$ref": ""
+                                    "oneOf": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "url": {
+                                                    "type": "string",
+                                                    "const": "https://simplifier.net/interregionalt-h-resept-prosjekt/shiguidelinemedicinalproduct"
+                                                },
+                                                "valueReference": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "reference": {
+                                                            "type": "string",
+                                                            "pattern": "^MedicinalProduct/{id}"
+                                                        },
+                                                        "type": {
+                                                            "type": "string",
+                                                            "const": "MedicinalProduct"
+                                                        }
+                                                    },
+                                                    "required": ["reference", "type"]
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "url": {
+                                                    "type": "string",
+                                                    "const": "https://simplifier.net/interregionalt-h-resept-prosjekt/shiguidelinepackagedproduct"
+                                                },
+                                                "valueReference": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "reference": {
+                                                            "type": "string",
+                                                            "pattern": "^MedicinalProductPackaged/{id}"
+                                                        },
+                                                        "type": {
+                                                            "type": "string",
+                                                            "const": "MedicinalProductPackaged"
+                                                        }
+                                                    },
+                                                    "required": ["reference", "type"]
+                                                }
+                                            }
+                                        }
+                                    ]
                                 }
+                            },
+                            "identifier": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "system": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["system", "value"]
                             }
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "Name of the medicinal product"
+                            },
+                            "status": {
+                                "type": "string",
+                                "description": "Publication status",
+                                "enum": ["draft", "active", "retired", "unknown"]
+                            },
+                            "publisher": {
+                                "type": "string",
+                                "description": "Name of the publisher",
+                                "const": "Sykehusinnkjøp HF"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "Natural language description of the activity definition"
+                        }
                         }
                     }
                 ]
             },
             "PlanDefinition": {
-                "allOf": [
-                    {
-                        "type": "object",
-                        "properties": {
-                            "resourceType": {
-                                "type": "string",
-                                "readOnly": true,
-                                "description": "The resource type",
-                                "enum": [
-                                    "PlanDefinition"
-                                ]
-                            },
-                            "action": {
-                                "type": "array",
-                                "description": "Array of actions including definitionCanonical, description and extension.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "description": {
-                                "type": "string",
-                                "description": "Description of the resource.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "effectivePeriod": {
-                                "type": "string",
-                                "description": "Valid agreement period for the treatment group",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "extension": {
-                                "type": "Extension",
-                                "description": "Extension to SHI Disease and DiseaseGroup",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "goal": {
-                                "type": "string",
-                                "description": "Goal for the plan.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "id": {
-                                "type": "string",
-                                "description": "Id of the resource",
-                                "readOnly": true
-                            },
-                            "identifier": {
-                                "type": "array",
-                                "description": "Business identifier for this product",
-                                "items": {
-                                    "$ref": "#/components/schemas/Identifier"
-                                }
-                            },
-                            "jurisdiction": {
-                                "type": "string",
-                                "description": "Intended jurisdiction of use, Norway according to https://build.fhir.org/valueset-iso3166-1-3.html",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "name": {
-                                "type": "string",
-                                "description": "General description of disease group.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "publisher": {
-                                "type": "string",
-                                "description": "Who publishes the treatment options. Always 'Sykehusinnkjøp' ",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "status": {
-                                "type": "string",
-                                "description": "Publication status of the resource. Either 'draft, active, retired eller unknown'.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "title": {
-                                "type": "string",
-                                "description": "Name of treatment group.",
-                                "items": {
-                                    "$ref": ""
-                                }
-                            },
-                            "type": {
-                                "type": "string",
-                                "description": "Area of ​​application 'ClinicalProtocol'",
-                                "items": {
-                                    "$ref": ""
+                    "allOf": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "resourceType": {
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "description": "The resource type",
+                                    "enum": ["PlanDefinition"]
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "description": "Id of the resource",
+                                    "readOnly": true
+                                },
+                                "meta": {
+                                    "type": "object",
+                                    "properties": {
+                                        "versionId": { "type": "string" },
+                                        "lastUpdated": { "type": "string", "format": "date-time" }
+                                    }
+                                },
+                                "extension": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "url": { "type": "string" },
+                                            "valueString": { "type": "string" },
+                                            "valueInteger": { "type": "integer" },
+                                            "shiGuidelineRank": {
+                                                "type": "integer",
+                                                "description": "The rank value for the treatment alternative from Sykehusinnkjøp. More details can be found [here](https://simplifier.net/interregionalt-h-resept-prosjekt/shiguidelinerank).",
+                                                "example": 1
+                                            }
+                                        }
+                                    }
+                                },
+                                "identifier": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "system": { "type": "string" },
+                                            "value": { "type": "string" }
+                                        }
+                                    }
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "General description of disease group."
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "description": "Name of treatment group."
+                                },
+                                "type": {
+                                    "type": "object",
+                                    "properties": {
+                                        "coding": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "system": { "type": "string" },
+                                                    "code": { "type": "string" },
+                                                    "display": { "type": "string" }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "status": {
+                                    "type": "string",
+                                    "description": "Publication status of the resource. Either 'draft, active, retired eller unknown'."
+                                },
+                                "publisher": {
+                                    "type": "string",
+                                    "description": "Who publishes the treatment options. Always 'Sykehusinnkjøp'."
+                                },
+                                "description": {
+                                    "type": "string",
+                                    "description": "Description of the resource."
+                                },
+                                "jurisdiction": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "coding": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "system": { "type": "string" },
+                                                        "code": { "type": "string" },
+                                                        "display": { "type": "string" }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "effectivePeriod": {
+                                    "type": "object",
+                                    "properties": {
+                                        "start": { "type": "string", "format": "date" },
+                                        "end": { "type": "string", "format": "date" }
+                                    }
+                                },
+                                "goal": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "description": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "text": { "type": "string" }
+                                                }
+                                            },
+                                            "addresses": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "coding": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "system": { "type": "string" },
+                                                                    "code": { "type": "string" },
+                                                                    "display": { "type": "string" }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
-                    }
-                ]
-            },
-            "RegulatedAuthorization": {
-                "type": "object",
-                "description": "Resource is under development and description is therefore not completed."
-            }
-        },
+                    ]
+                },
+            "MedicinalProductAuthorization": {
+                    "type": "object",
+                    "properties": {
+                        "resourceType": {
+                            "type": "string",
+                            "enum": ["MedicinalProductAuthorization"]
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "meta": {
+                            "type": "object",
+                            "properties": {
+                                "versionId": {
+                                    "type": "string"
+                                },
+                                "lastUpdated": {
+                                    "type": "string",
+                                    "format": "date-time"
+                                }
+                            }
+                        },
+                        "extension": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "valueCodeableConcept": {
+                                        "type": "object",
+                                        "properties": {
+                                            "coding": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "system": {
+                                                            "type": "string"
+                                                        },
+                                                        "code": {
+                                                            "type": "string"
+                                                        },
+                                                        "display": {
+                                                            "type": "string"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "identifier": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "system": {
+                                        "type": "string"
+                                    },
+                                    "value": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "subject": {
+                            "type": "object",
+                            "properties": {
+                                "reference": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": ["resourceType", "id", "subject"]
+                }
+                },
         "securitySchemes": {
             "apiKeyHeader": {
                 "type": "apiKey",
@@ -7206,13 +7833,24 @@
                 "summary": "Search by ID",
                 "externalValue": "./examples/plandef.json"
             },
+            "plandefById": {
+                "summary": "Search by ID",
+                "externalValue": "./examples/plandefById.json"
+            },
             "activitydef": {
                 "summary": "Search by ID",
                 "externalValue": "./examples/activitydef.json"
+            },"activitydefById": {
+                "summary": "Search by ID",
+                "externalValue": "./examples/activitydefById.json"
             },
             "regulatedauth": {
                 "summary": "Search by ID",
                 "externalValue": "./examples/regulatedauth.json"
+            },
+            "regulatedauthById": {
+                "summary": "Search by ID",
+                "externalValue": "./examples/regulatedauthById.json"
             }
             
             
@@ -7298,9 +7936,9 @@
             "description": "⚠️ Note: This FHIR resource is under development and is not production ready. Please refer to the H-resept project.<br><br> PlanDefinition is a resource with predefined groups of actions to be performed under specific circumstances, often including conditional elements, options, and other decision points. The resource is flexible enough to be used to represent a variety of workflows, such as clinical decision support. Plan Definition contains hierarchical groups of action definitions, which describe an activity to be performed. The activities are defined by the Activity Definition resource described in Activity Definition"
         },
         {
-            "name": "RegulatedAuthorization",
-            "x-displayName": "RegulatedAuthorization",
-            "description": "⚠️ Note: This FHIR resource is under development and is not production ready. Please refer to the H-resept project.<br><br>  RegulatedAuthorization is a resource for regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product."
+            "name": "MedicinalProductAuthorization",
+            "x-displayName": "MedicinalProductAuthorization",
+            "description": "⚠️ Note: This FHIR resource is under development and is not production ready. Please refer to the H-resept project.<br><br>  MedicinalProductAuthorization is a resource for regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product."
         }
     ],
     "x-tagGroups": [
@@ -7341,7 +7979,7 @@
             "tags": [
                 "ActivityDefinition",
                 "PlanDefinition",
-                "RegulatedAuthorization"
+                "MedicinalProductAuthorization"
             ]
         }
     ]
