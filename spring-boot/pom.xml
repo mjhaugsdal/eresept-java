@@ -37,7 +37,7 @@
 
     <modules>
         <module>fest</module>
-<!--        <module>fest-fhir</module>-->
+        <module>fest-fhir</module>
         <module>spring-boot-rest</module>
         <module>spring-boot-soap</module>
     </modules>

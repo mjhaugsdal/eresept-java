@@ -64,6 +64,22 @@
             <artifactId>jackson-databind-nullable</artifactId>
             <version>0.2.6</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-multipart -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-multipart</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
@@ -83,19 +99,19 @@
             <artifactId>gson</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
-        <!--        <dependency>-->
-        <!--            <groupId>io.swagger.core.v3</groupId>-->
-        <!--            <artifactId>swagger-annotations</artifactId>-->
-        <!--            <version>2.2.28</version>-->
-        <!--        </dependency>-->
+        <!--         https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations-->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.2.28</version>
+        </dependency>
 
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.swagger/swagger-jaxrs &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>io.swagger</groupId>-->
-        <!--            <artifactId>swagger-jaxrs</artifactId>-->
-        <!--            <version>1.6.15</version>-->
-        <!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-jaxrs -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jaxrs</artifactId>
+            <version>1.6.15</version>
+        </dependency>
 
     </dependencies>
 
@@ -105,32 +121,24 @@
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
                 <version>7.12.0</version>
-                <executions>
-                    <execution>
-                        <id>java-client</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/FHIR-R4.json</inputSpec>
-                            <!--                            <generatorName>jaxrs-cxf-client</generatorName>-->
-                            <generatorName>java</generatorName>
-                            <library>jersey3</library>
-                            <modelPackage>io.github.mjhaugsdal.fhir.model</modelPackage>
-                            <apiPackage>io.github.mjhaugsdal.fhir.api</apiPackage>
-                            <generateApiTests>false</generateApiTests>
-                            <generateModelTests>false</generateModelTests>
-                            <skipValidateSpec>true</skipValidateSpec>
-                            <configOptions>
-                                <useJakartaEe>true</useJakartaEe>
-                                <sourceFolder>src/gen/java/main</sourceFolder>
-                                <dateLibrary>java8</dateLibrary>
-                                <legacyDiscriminatorBehavior>false</legacyDiscriminatorBehavior>
-                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                </executions>
+                <configuration>
+                    <inputSpec>${project.basedir}/src/main/resources/FHIR-R4.json</inputSpec>
+                    <!--                            <generatorName>jaxrs-cxf-client</generatorName>-->
+                    <generatorName>java</generatorName>
+                    <library>jersey3</library>
+                    <modelPackage>io.github.mjhaugsdal.eresept.fest.fhir.model</modelPackage>
+                    <apiPackage>io.github.mjhaugsdal.eresept.fest.fhir.api</apiPackage>
+                    <generateApiTests>false</generateApiTests>
+                    <generateModelTests>false</generateModelTests>
+                    <skipValidateSpec>true</skipValidateSpec>
+                    <configOptions>
+                        <useJakartaEe>true</useJakartaEe>
+                        <sourceFolder>src/gen/java/main</sourceFolder>
+                        <dateLibrary>java8</dateLibrary>
+                        <legacyDiscriminatorBehavior>false</legacyDiscriminatorBehavior>
+                        <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                    </configOptions>
+                </configuration>
             </plugin>
         </plugins>
     </build>
