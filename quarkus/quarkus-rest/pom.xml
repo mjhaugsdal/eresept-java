@@ -10,8 +10,23 @@
     </parent>
     <groupId>io.github.mjhaugsdal.quarkus</groupId>
     <artifactId>quarkus-rest</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <properties>
+        <testcontainers.version>2.0.3</testcontainers.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <modules>
         <module>quarkus-rest-common</module>

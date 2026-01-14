@@ -17,6 +17,7 @@ public class QuarkusRestTestServerContainer implements QuarkusTestResourceLifecy
     @Override
     public Map<String, String> start() {
         testContainer.start();
+
         return ImmutableMap.of("test.container.port", String.valueOf(testContainer.getFirstMappedPort()));
     }
 
