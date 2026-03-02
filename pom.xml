@@ -15,17 +15,17 @@
         <module>quarkus</module>
     </modules>
     <properties>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <cxf.version>4.1.4</cxf.version>
+        <cxf.version>4.2.0</cxf.version>
         <xmlsec.version>4.0.4</xmlsec.version>
         <xml-schemas.version>4.2.0</xml-schemas.version>
-        <snakeyaml.version>2.3</snakeyaml.version>
+        <snakeyaml.version>2.6</snakeyaml.version>
         <opensaml.version>4.0.1</opensaml.version>
-        <surefire-plugin.version>3.5.2</surefire-plugin.version>
+        <surefire-plugin.version>3.5.5</surefire-plugin.version>
     </properties>
 
     <dependencyManagement>

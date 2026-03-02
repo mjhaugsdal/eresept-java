@@ -10,7 +10,7 @@
     </parent>
 
     <properties>
-        <spring-boot.version>4.0.1</spring-boot.version>
+        <spring-boot.version>4.0.3</spring-boot.version>
     </properties>
 
     <artifactId>spring-boot</artifactId>

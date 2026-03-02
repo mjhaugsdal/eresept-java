@@ -4,7 +4,7 @@ import io.github.mjhaugsdal.rest.NaWebServiceImpl;
 import io.github.mjhaugsdal.rest.RekvirentWebServiceImpl;
 import io.github.mjhaugsdal.rest.UtlevererWebServiceImpl;
 import org.apache.cxf.endpoint.Server;
-import org.apache.cxf.feature.LoggingFeature;
+import org.apache.cxf.ext.logging.LoggingFeature;
 import org.apache.cxf.jaxrs.JAXRSServerFactoryBean;
 import org.apache.cxf.rs.security.jose.jaxrs.JweContainerRequestFilter;
 import org.apache.cxf.rs.security.jose.jaxrs.JweWriterInterceptor;
